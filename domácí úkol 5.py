@@ -45,10 +45,8 @@ teploty_bonus = [
 def convert(teploty_bonus):
     keys = [den[0] for den in teploty_bonus]
     values = [sum(zaznam[1:]) / len(zaznam[1:]) for zaznam in teploty_bonus]
-    slovnik = {keys[i]: values[i] for i in range(len(teploty_bonus))}
+    slovnik = {keys[i]: f"{values[i]} °C" for i in range(len(teploty_bonus))}
     return slovnik
 
 print(convert(teploty_bonus))
-
-
 
